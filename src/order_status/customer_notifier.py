@@ -2,7 +2,7 @@ from .observer import Observer
 
 
 class CustomerNotifier(Observer):
-    def _init_(self): self.messages=[]
+    def __init__(self): self.messages=[]
     def update(self, event):
         order_id, status = event
         self.notify_customer(order_id, status)
