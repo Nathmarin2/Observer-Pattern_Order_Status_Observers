@@ -34,3 +34,7 @@ pytest -q
 - Use an explicit object-oriented design.
 - Keep one main class per source file.
 
+## Design explanation / lifecycle or coupling cost
+
+OrderStatus notifies all observers when the order changes.
+One cost is that we need to remove observers when we don't need them anymore.
